@@ -51,7 +51,7 @@ function AddEmployee(props) {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={addEmployee} type="submit">
+            <Button variant="primary" onClick={addEmployee}>
               Add Now
             </Button>
           </Modal.Footer>
