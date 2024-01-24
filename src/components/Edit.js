@@ -43,7 +43,7 @@ export default function Edit(props) {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="primary" onSubmit={update} type="submit">
+          <Button variant="primary" onClick={update} type="submit">
             Update
           </Button>
         </Modal.Footer>

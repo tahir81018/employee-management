@@ -19,8 +19,11 @@ function AddEmployee(props) {
   };
 
   const addEmployee = () => {
-    axios
-      .post(baseUrl + "/employees", employee)
+    axios({
+      method: "post",
+      url: baseUrl + "/employees",
+      data: employee,
+    })
       .then((response) => {
         notify(response.data.message);
       })
@@ -48,7 +51,7 @@ function AddEmployee(props) {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onSubmit={addEmployee} type="submit">
+            <Button variant="primary" onClick={addEmployee} type="submit">
               Add Now
             </Button>
           </Modal.Footer>
